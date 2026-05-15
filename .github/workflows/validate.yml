@@ -27,6 +27,7 @@ jobs:
         run: |
           set -e
           for f in corpus/*/paper.json; do
+            [ -f "$f" ] || continue
             echo "::group::$f"
             uv run validator.py "$f"
             echo "::endgroup::"
