@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2410.07331",
+  "condition": "PROSE",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "A_numeric",
+  "elapsed_s": 2.85,
+  "raw_response": "{\"quote\": \"Experiments show that although the baseline performs better than other existing frameworks, using the current best LLMs achieves only 30.5% accuracy, leaving ample room for improvement.\", \"location\": \"Abstract\"}",
+  "usage": {
+    "input_tokens": 24904,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 51
+  }
+}

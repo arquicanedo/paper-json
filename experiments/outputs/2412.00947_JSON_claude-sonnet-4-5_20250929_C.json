@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2412.00947",
+  "condition": "JSON",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "C",
+  "elapsed_s": 6.91,
+  "raw_response": "Looking at the PAPER.JSON block's reproducibility.commands field:\n\n```json\n\"commands\": [\n  \"git clone https://github.com/psunlpgroup/VisOnlyQA\",\n  \"cd VisOnlyQA && pip install -r requirements.txt\",\n  \"python evaluate.py --model gpt-4o --split test\"\n]\n```\n\nHowever, these commands show evaluation for a single model (gpt-4o), not the full Table 1 which reports results for 23 VLMs across multiple tasks.\n\nThe paper states in the reproducibility statement (page 11): \"In our GitHub repository, we provide our VisOnlyQA dataset, code for dataset creation and all experiments, and model responses.\"\n\nSince the PAPER.JSON does not contain the exact command to reproduce the complete Table 1 with all 23 models, and only shows a sample command for one model:\n\n{\"command\": \"NOTFOUND\"}",
+  "usage": {
+    "input_tokens": 63581,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 221
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2410.07331",
+  "condition": "JSON",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "B",
+  "elapsed_s": 3.41,
+  "raw_response": "{\"claim\": \"The DA-Agent baseline powered by GPT-4 outperforms existing frameworks (X-Agent, AutoGen, OpenDevin) on DA-Code, achieving 31.5% overall score compared to 26.2% for OpenDevin, but the best LLMs still only achieve 30.5% accuracy overall, leaving substantial room for improvement.\"}",
+  "usage": {
+    "input_tokens": 25404,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 85
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2410.07331",
+  "condition": "JSON",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "A_prose",
+  "elapsed_s": 2.34,
+  "raw_response": "{\"quote\": \"Experimental results indicate that model performance decreases with increasing difficulty, validating our grading approach.\", \"location\": \"Section 5.2, Main Results subsection\"}",
+  "usage": {
+    "input_tokens": 25520,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 42
+  }
+}

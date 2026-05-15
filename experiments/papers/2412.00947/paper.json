@@ -1,0 +1,63 @@
+{
+  "id": "visonlyqa",
+  "title": "VisOnlyQA: Large Vision Language Models Still Struggle with Visual Perception of Geometric Information",
+  "version": "1.0.0",
+  "status": "published",
+  "authors": [
+    {
+      "name": "Ryo Kamoi",
+      "affiliation": "Penn State University"
+    },
+    {
+      "name": "Yusen Zhang",
+      "affiliation": "Penn State University"
+    },
+    {
+      "name": "Nan Zhang",
+      "affiliation": "Penn State University"
+    },
+    {
+      "name": "Jiawei Han",
+      "affiliation": "Penn State University"
+    },
+    {
+      "name": "Rui Zhang",
+      "affiliation": "Penn State University"
+    }
+  ],
+  "arxiv_categories": [
+    "cs.CV",
+    "cs.CL"
+  ],
+  "arxiv_id": "2412.00947",
+  "arxiv_url": "https://arxiv.org/abs/2412.00947",
+  "pdf_url": "https://arxiv.org/pdf/2412.00947",
+  "abstract": "We introduce VisOnlyQA, a benchmark evaluating visual perception of geometric information across 12 task types. We evaluate 23 state-of-the-art LVLMs and show that models often cannot accurately perceive basic geometric information, while human performance is nearly perfect. Fine-tuning on VisOnlyQA training data is not always effective, even for in-distribution tasks.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "state-of-the-art LVLMs, including GPT-4o and Gemini 2.5 Pro, perform poorly in the basic geometric perception tasks in VisOnlyQA (48.8% and 79.0% in accuracy on the Real split), while human performance is nearly perfect (93.5%).",
+      "evidence": [
+        "Table 1",
+        "Section 4.1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "This finding suggests that language models play a crucial role in processing visual information encoded by ViT, and strong language models are needed even in geometric perception tasks that do not involve challenging reasoning or knowledge.",
+      "evidence": [
+        "Section 4.2"
+      ]
+    }
+  ],
+  "reproducibility": {
+    "environment": "Python, HuggingFace Transformers",
+    "commands": [
+      "git clone https://github.com/psunlpgroup/VisOnlyQA",
+      "cd VisOnlyQA && pip install -r requirements.txt",
+      "python evaluate.py --model gpt-4o --split test"
+    ],
+    "agent_friendly": true,
+    "human_intervention_required": false
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "arxiv_id": "2412.00947",
+  "title": "VisOnlyQA: Large Vision Language Models Still Struggle with Visual Perception of Geometric Information",
+  "task_A_numeric": {
+    "topic": "What does this paper claim about the accuracy gap between state-of-the-art LVLMs and humans on geometric perception tasks?",
+    "claim_id": "C1",
+    "exact_quote": "state-of-the-art LVLMs, including GPT-4o and Gemini 2.5 Pro, perform poorly in the basic geometric perception tasks in VisOnlyQA (48.8% and 79.0% in accuracy on the Real split), while human performance is nearly perfect (93.5%).",
+    "in_paper_json_as": "C1"
+  },
+  "task_A_prose": {
+    "topic": "What does this paper claim about the role of language models in LVLM geometric perception performance?",
+    "claim_id": "C2",
+    "exact_quote": "This finding suggests that language models play a crucial role in processing visual information encoded by ViT, and strong language models are needed even in geometric perception tasks that do not involve challenging reasoning or knowledge.",
+    "in_paper_json_as": "C2"
+  },
+  "task_B": {
+    "topic": "GPT-4o's accuracy on the VisOnlyQA Real split",
+    "true_claim": "GPT-4o achieves 48.8% accuracy on the VisOnlyQA Real split, well below human performance of 93.5%.",
+    "hallucination_triggers": ["above 50", "over 50", "more than 50", "exceeds 50", "surpasses 50"],
+    "required_qualifiers": ["48.8", "93.5"]
+  },
+  "task_C": {
+    "figure": "Table 1 (accuracy of 23 VLMs on VisOnlyQA tasks)",
+    "exact_command": "python evaluate.py --model gpt-4o --split test",
+    "command_availability": "RETRIEVABLE_FROM_REPO",
+    "repo_url": "https://github.com/psunlpgroup/VisOnlyQA",
+    "note": "repo exists with eval scripts, command not in paper prose"
+  }
+}

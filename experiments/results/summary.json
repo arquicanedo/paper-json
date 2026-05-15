@@ -1,0 +1,110 @@
+{
+  "task_AB": {
+    "JSON": {
+      "A_numeric": {
+        "n": 5,
+        "mean": 1.4,
+        "scores": [
+          2,
+          2,
+          1,
+          2,
+          0
+        ]
+      },
+      "A_prose": {
+        "n": 5,
+        "mean": 1.2,
+        "scores": [
+          2,
+          2,
+          0,
+          1,
+          1
+        ]
+      },
+      "B": {
+        "n": 5,
+        "mean": 0.8,
+        "scores": [
+          1,
+          1,
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    "PROSE": {
+      "A_numeric": {
+        "n": 5,
+        "mean": 1.4,
+        "scores": [
+          1,
+          2,
+          1,
+          2,
+          1
+        ]
+      },
+      "A_prose": {
+        "n": 5,
+        "mean": 0.6,
+        "scores": [
+          0,
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      "B": {
+        "n": 5,
+        "mean": 0.4,
+        "scores": [
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      }
+    }
+  },
+  "task_C": {
+    "RETRIEVABLE_FROM_REPO": {
+      "JSON": {
+        "scores": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "interpretations": [
+          "retrieval_from_paper_json",
+          "retrieval_from_paper_json",
+          "retrieval_from_paper_json",
+          "retrieval_from_paper_json",
+          "retrieval_from_paper_json"
+        ]
+      },
+      "PROSE": {
+        "scores": [
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "interpretations": [
+          "correct_abstention",
+          "correct_abstention",
+          "correct_abstention",
+          "hallucination",
+          "correct_abstention"
+        ]
+      }
+    }
+  }
+}

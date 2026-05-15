@@ -1,0 +1,59 @@
+{
+  "id": "rgb-rag-benchmark",
+  "title": "Benchmarking Large Language Models in Retrieval-Augmented Generation",
+  "version": "1.0.0",
+  "status": "published",
+  "authors": [
+    {
+      "name": "Jiawei Chen",
+      "affiliation": "Zhejiang University"
+    },
+    {
+      "name": "Hongyu Lin",
+      "affiliation": "Institute of Automation, CAS"
+    },
+    {
+      "name": "Xianpei Han",
+      "affiliation": "Institute of Automation, CAS"
+    },
+    {
+      "name": "Le Sun",
+      "affiliation": "Institute of Automation, CAS"
+    }
+  ],
+  "arxiv_categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "arxiv_id": "2309.01431",
+  "arxiv_url": "https://arxiv.org/abs/2309.01431",
+  "pdf_url": "https://arxiv.org/pdf/2309.01431",
+  "abstract": "We systematically investigate the impact of Retrieval-Augmented Generation on large language models across 4 fundamental abilities: noise robustness, negative rejection, information integration, and counterfactual robustness. We establish RGB, a new evaluation corpus in English and Chinese. Evaluation reveals that while LLMs exhibit a certain degree of noise robustness, they still struggle significantly in terms of negative rejection, information integration, and dealing with false information.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "when the noise ratio exceeds 80%, the accuracy decreases significantly at a significance level of 0.05. For example, the performance of ChatGPT has decreased from 96.33% to 76.00%, while the performance of ChatGLM2-6B has decreased from 91.33% to 57.33%.",
+      "evidence": [
+        "Table 2",
+        "Section 4.1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "LLMs frequently fail to reject answering and generate incorrect answers when none of the external documents contain relevant information.",
+      "evidence": [
+        "Section 4.3"
+      ]
+    }
+  ],
+  "reproducibility": {
+    "environment": "Python, HuggingFace Transformers",
+    "commands": [
+      "git clone https://github.com/chen700564/RGB",
+      "cd RGB && pip install -r requirements.txt",
+      "python evaluate_rgb.py --model gpt-4 --split test --lang en"
+    ],
+    "agent_friendly": true,
+    "human_intervention_required": false
+  }
+}

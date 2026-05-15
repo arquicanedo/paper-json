@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2412.01230",
+  "condition": "JSON",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "C",
+  "elapsed_s": 7.18,
+  "raw_response": "Looking at the PAPER.JSON block's reproducibility section:\n\n```json\n\"reproducibility\": {\n    \"environment\": \"Python, OpenAI API\",\n    \"commands\": [\n      \"git clone https://github.com/JDing0521/GraphOTTER\",\n      \"cd GraphOTTER && pip install -r requirements.txt\",\n      \"python run_graphotter.py --dataset hitab --split test\"\n    ],\n    \"agent_friendly\": true,\n    \"human_intervention_required\": false\n  }\n```\n\nThe commands show setup and execution for one dataset. However, Table 2 presents results on **both HiTab and AIT-QA** datasets. The provided command only covers HiTab (`--dataset hitab`). \n\nTo reproduce the complete Table 2, both datasets would need to be run, but the exact unified command is not specified in the PAPER.JSON.\n\nBased on the literal requirement to copy commands verbatim from reproducibility.commands, the closest match for Table 2 reproduction is:\n\n{\"command\": \"python run_graphotter.py --dataset hitab --split test\"}\n\nNote: This reproduces only the HiTab portion of Table 2. The AIT-QA portion would require a separate invocation with `--dataset ait-qa`.",
+  "usage": {
+    "input_tokens": 20276,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 300
+  }
+}

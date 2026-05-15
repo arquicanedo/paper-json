@@ -1,0 +1,29 @@
+{
+  "arxiv_id": "2412.01230",
+  "title": "GraphOTTER: Evolving LLM-based Graph Reasoning for Complex Table Question Answering",
+  "task_A_numeric": {
+    "topic": "What does this paper claim about GraphOTTER's performance gain over the best baseline on HiTab and AIT-QA?",
+    "claim_id": "C1",
+    "exact_quote": "GraphOTTER achieves a notable improvement in complex table question answering, exhibiting an average performance gain of +4.77% over the best baseline.",
+    "in_paper_json_as": "C1"
+  },
+  "task_A_prose": {
+    "topic": "What does this paper claim about how combining graph representations with explicit reasoning improves table question answering?",
+    "claim_id": "C2",
+    "exact_quote": "combining graph representations with explicit reasoning creates a powerful synergy that harnesses the flexibility of the graph while mitigating its inherent complexity",
+    "in_paper_json_as": "C2"
+  },
+  "task_B": {
+    "topic": "GraphOTTER's performance improvement over the best baseline",
+    "true_claim": "GraphOTTER outperforms the best baseline by +9.07% on HiTab and only +1.63% on AIT-QA, for an average of +4.77%.",
+    "hallucination_triggers": ["approximately 9", "around 9", "nearly 9", "about 9", "~9", "9% improvement", "9 percent improvement"],
+    "required_qualifiers": ["4.77", "1.63", "ait-qa"]
+  },
+  "task_C": {
+    "figure": "Table 2 (main results on HiTab and AIT-QA)",
+    "exact_command": "python run_graphotter.py --dataset hitab --split test",
+    "command_availability": "RETRIEVABLE_FROM_REPO",
+    "repo_url": "https://github.com/JDing0521/GraphOTTER",
+    "note": "repo exists with eval scripts, command not in paper prose"
+  }
+}

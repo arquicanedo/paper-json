@@ -1,0 +1,571 @@
+[
+  {
+    "arxiv_id": "2309.01431",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_numeric",
+    "score": 2,
+    "meta": {
+      "detail": "exact_match"
+    },
+    "file": "2309.01431_JSON_claude-sonnet-4-5_20250929_A_numeric.json"
+  },
+  {
+    "arxiv_id": "2309.01431",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_prose",
+    "score": 2,
+    "meta": {
+      "detail": "exact_match"
+    },
+    "file": "2309.01431_JSON_claude-sonnet-4-5_20250929_A_prose.json"
+  },
+  {
+    "arxiv_id": "2309.01431",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "B",
+    "score": 1,
+    "meta": {
+      "hallucinations_fired": [],
+      "qualifiers_present": [
+        "80",
+        "decrease",
+        "drop",
+        "significant"
+      ],
+      "qualifiers_missing": [],
+      "agent_claim_snippet": "llms exhibit some degree of noise robustness in rag, but accuracy decreases significantly when the noise ratio exceeds 8"
+    },
+    "file": "2309.01431_JSON_claude-sonnet-4-5_20250929_B.json"
+  },
+  {
+    "arxiv_id": "2309.01431",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "C",
+    "score": 1,
+    "meta": {
+      "availability": "RETRIEVABLE_FROM_REPO",
+      "condition": "JSON",
+      "agent_retrieved": true,
+      "agent_abstained": false,
+      "agent_hallucinated": false,
+      "interpretation": "retrieval_from_paper_json"
+    },
+    "file": "2309.01431_JSON_claude-sonnet-4-5_20250929_C.json"
+  },
+  {
+    "arxiv_id": "2309.01431",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_numeric",
+    "score": 1,
+    "meta": {
+      "detail": "partial_match",
+      "overlap": 1.0
+    },
+    "file": "2309.01431_PROSE_claude-sonnet-4-5_20250929_A_numeric.json"
+  },
+  {
+    "arxiv_id": "2309.01431",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_prose",
+    "score": 0,
+    "meta": {
+      "detail": "wrong_claim"
+    },
+    "file": "2309.01431_PROSE_claude-sonnet-4-5_20250929_A_prose.json"
+  },
+  {
+    "arxiv_id": "2309.01431",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "B",
+    "score": 0,
+    "meta": {
+      "hallucinations_fired": [],
+      "qualifiers_present": [
+        "80",
+        "decrease",
+        "significant"
+      ],
+      "qualifiers_missing": [
+        "drop"
+      ],
+      "agent_claim_snippet": "the paper claims that llms demonstrate a certain degree of noise robustness in rag, with strong performance even in the "
+    },
+    "file": "2309.01431_PROSE_claude-sonnet-4-5_20250929_B.json"
+  },
+  {
+    "arxiv_id": "2309.01431",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "C",
+    "score": 1,
+    "meta": {
+      "availability": "RETRIEVABLE_FROM_REPO",
+      "condition": "PROSE",
+      "agent_retrieved": false,
+      "agent_abstained": true,
+      "agent_hallucinated": false,
+      "interpretation": "correct_abstention"
+    },
+    "file": "2309.01431_PROSE_claude-sonnet-4-5_20250929_C.json"
+  },
+  {
+    "arxiv_id": "2410.07331",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_numeric",
+    "score": 2,
+    "meta": {
+      "detail": "exact_match"
+    },
+    "file": "2410.07331_JSON_claude-sonnet-4-5_20250929_A_numeric.json"
+  },
+  {
+    "arxiv_id": "2410.07331",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_prose",
+    "score": 2,
+    "meta": {
+      "detail": "exact_match"
+    },
+    "file": "2410.07331_JSON_claude-sonnet-4-5_20250929_A_prose.json"
+  },
+  {
+    "arxiv_id": "2410.07331",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "B",
+    "score": 1,
+    "meta": {
+      "hallucinations_fired": [],
+      "qualifiers_present": [
+        "30.5",
+        "improvement"
+      ],
+      "qualifiers_missing": [],
+      "agent_claim_snippet": "the da-agent baseline powered by gpt-4 outperforms existing frameworks (x-agent, autogen, opendevin) on da-code, achievi"
+    },
+    "file": "2410.07331_JSON_claude-sonnet-4-5_20250929_B.json"
+  },
+  {
+    "arxiv_id": "2410.07331",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "C",
+    "score": 1,
+    "meta": {
+      "availability": "RETRIEVABLE_FROM_REPO",
+      "condition": "JSON",
+      "agent_retrieved": true,
+      "agent_abstained": false,
+      "agent_hallucinated": false,
+      "interpretation": "retrieval_from_paper_json"
+    },
+    "file": "2410.07331_JSON_claude-sonnet-4-5_20250929_C.json"
+  },
+  {
+    "arxiv_id": "2410.07331",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_numeric",
+    "score": 2,
+    "meta": {
+      "detail": "exact_match"
+    },
+    "file": "2410.07331_PROSE_claude-sonnet-4-5_20250929_A_numeric.json"
+  },
+  {
+    "arxiv_id": "2410.07331",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_prose",
+    "score": 1,
+    "meta": {
+      "detail": "partial_match",
+      "overlap": 1.0
+    },
+    "file": "2410.07331_PROSE_claude-sonnet-4-5_20250929_A_prose.json"
+  },
+  {
+    "arxiv_id": "2410.07331",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "B",
+    "score": 0,
+    "meta": {
+      "hallucinations_fired": [],
+      "qualifiers_present": [
+        "30.5"
+      ],
+      "qualifiers_missing": [
+        "improvement"
+      ],
+      "agent_claim_snippet": "the da-agent baseline powered by the best llm (gpt-4) achieves 30.5% accuracy on da-code and outperforms existing agent "
+    },
+    "file": "2410.07331_PROSE_claude-sonnet-4-5_20250929_B.json"
+  },
+  {
+    "arxiv_id": "2410.07331",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "C",
+    "score": 1,
+    "meta": {
+      "availability": "RETRIEVABLE_FROM_REPO",
+      "condition": "PROSE",
+      "agent_retrieved": false,
+      "agent_abstained": true,
+      "agent_hallucinated": false,
+      "interpretation": "correct_abstention"
+    },
+    "file": "2410.07331_PROSE_claude-sonnet-4-5_20250929_C.json"
+  },
+  {
+    "arxiv_id": "2412.00947",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_numeric",
+    "score": 1,
+    "meta": {
+      "detail": "partial_match",
+      "overlap": 1.0
+    },
+    "file": "2412.00947_JSON_claude-sonnet-4-5_20250929_A_numeric.json"
+  },
+  {
+    "arxiv_id": "2412.00947",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_prose",
+    "score": 0,
+    "meta": {
+      "detail": "wrong_claim"
+    },
+    "file": "2412.00947_JSON_claude-sonnet-4-5_20250929_A_prose.json"
+  },
+  {
+    "arxiv_id": "2412.00947",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "B",
+    "score": 1,
+    "meta": {
+      "hallucinations_fired": [],
+      "qualifiers_present": [
+        "48.8",
+        "93.5"
+      ],
+      "qualifiers_missing": [],
+      "agent_claim_snippet": "gpt-4o achieves 48.8% accuracy on the visonlyqa real split, which is far below the nearly perfect human performance of 9"
+    },
+    "file": "2412.00947_JSON_claude-sonnet-4-5_20250929_B.json"
+  },
+  {
+    "arxiv_id": "2412.00947",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "C",
+    "score": 1,
+    "meta": {
+      "availability": "RETRIEVABLE_FROM_REPO",
+      "condition": "JSON",
+      "agent_retrieved": true,
+      "agent_abstained": false,
+      "agent_hallucinated": false,
+      "interpretation": "retrieval_from_paper_json"
+    },
+    "file": "2412.00947_JSON_claude-sonnet-4-5_20250929_C.json"
+  },
+  {
+    "arxiv_id": "2412.00947",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_numeric",
+    "score": 1,
+    "meta": {
+      "detail": "partial_match",
+      "overlap": 1.0
+    },
+    "file": "2412.00947_PROSE_claude-sonnet-4-5_20250929_A_numeric.json"
+  },
+  {
+    "arxiv_id": "2412.00947",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_prose",
+    "score": 0,
+    "meta": {
+      "detail": "wrong_claim"
+    },
+    "file": "2412.00947_PROSE_claude-sonnet-4-5_20250929_A_prose.json"
+  },
+  {
+    "arxiv_id": "2412.00947",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "B",
+    "score": 1,
+    "meta": {
+      "hallucinations_fired": [],
+      "qualifiers_present": [
+        "48.8",
+        "93.5"
+      ],
+      "qualifiers_missing": [],
+      "agent_claim_snippet": "gpt-4o achieves 48.8% accuracy on the visonlyqa-eval-real split, which is far from the near-perfect human performance of"
+    },
+    "file": "2412.00947_PROSE_claude-sonnet-4-5_20250929_B.json"
+  },
+  {
+    "arxiv_id": "2412.00947",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "C",
+    "score": 1,
+    "meta": {
+      "availability": "RETRIEVABLE_FROM_REPO",
+      "condition": "PROSE",
+      "agent_retrieved": false,
+      "agent_abstained": true,
+      "agent_hallucinated": false,
+      "interpretation": "correct_abstention"
+    },
+    "file": "2412.00947_PROSE_claude-sonnet-4-5_20250929_C.json"
+  },
+  {
+    "arxiv_id": "2412.01186",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_numeric",
+    "score": 2,
+    "meta": {
+      "detail": "exact_match"
+    },
+    "file": "2412.01186_JSON_claude-sonnet-4-5_20250929_A_numeric.json"
+  },
+  {
+    "arxiv_id": "2412.01186",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_prose",
+    "score": 1,
+    "meta": {
+      "detail": "partial_match",
+      "overlap": 1.0
+    },
+    "file": "2412.01186_JSON_claude-sonnet-4-5_20250929_A_prose.json"
+  },
+  {
+    "arxiv_id": "2412.01186",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "B",
+    "score": 0,
+    "meta": {
+      "hallucinations_fired": [],
+      "qualifiers_present": [
+        "0.5"
+      ],
+      "qualifiers_missing": [
+        "sea-lion"
+      ],
+      "agent_claim_snippet": "english prompts generally work better than native sea language prompts for most models, though the performance gap is ac"
+    },
+    "file": "2412.01186_JSON_claude-sonnet-4-5_20250929_B.json"
+  },
+  {
+    "arxiv_id": "2412.01186",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "C",
+    "score": 1,
+    "meta": {
+      "availability": "RETRIEVABLE_FROM_REPO",
+      "condition": "JSON",
+      "agent_retrieved": true,
+      "agent_abstained": false,
+      "agent_hallucinated": false,
+      "interpretation": "retrieval_from_paper_json"
+    },
+    "file": "2412.01186_JSON_claude-sonnet-4-5_20250929_C.json"
+  },
+  {
+    "arxiv_id": "2412.01186",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_numeric",
+    "score": 2,
+    "meta": {
+      "detail": "exact_match"
+    },
+    "file": "2412.01186_PROSE_claude-sonnet-4-5_20250929_A_numeric.json"
+  },
+  {
+    "arxiv_id": "2412.01186",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_prose",
+    "score": 1,
+    "meta": {
+      "detail": "partial_match",
+      "overlap": 0.67
+    },
+    "file": "2412.01186_PROSE_claude-sonnet-4-5_20250929_A_prose.json"
+  },
+  {
+    "arxiv_id": "2412.01186",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "B",
+    "score": 0,
+    "meta": {
+      "hallucinations_fired": [],
+      "qualifiers_present": [
+        "0.5"
+      ],
+      "qualifiers_missing": [
+        "sea-lion"
+      ],
+      "agent_claim_snippet": "english prompts generally work better than native prompts for most sea language models, with models showing better perfo"
+    },
+    "file": "2412.01186_PROSE_claude-sonnet-4-5_20250929_B.json"
+  },
+  {
+    "arxiv_id": "2412.01186",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "C",
+    "score": 0,
+    "meta": {
+      "availability": "RETRIEVABLE_FROM_REPO",
+      "condition": "PROSE",
+      "agent_retrieved": false,
+      "agent_abstained": false,
+      "agent_hallucinated": true,
+      "interpretation": "hallucination"
+    },
+    "file": "2412.01186_PROSE_claude-sonnet-4-5_20250929_C.json"
+  },
+  {
+    "arxiv_id": "2412.01230",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_numeric",
+    "score": 0,
+    "meta": {
+      "detail": "wrong_claim"
+    },
+    "file": "2412.01230_JSON_claude-sonnet-4-5_20250929_A_numeric.json"
+  },
+  {
+    "arxiv_id": "2412.01230",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_prose",
+    "score": 1,
+    "meta": {
+      "detail": "partial_match",
+      "overlap": 1.0
+    },
+    "file": "2412.01230_JSON_claude-sonnet-4-5_20250929_A_prose.json"
+  },
+  {
+    "arxiv_id": "2412.01230",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "B",
+    "score": 1,
+    "meta": {
+      "hallucinations_fired": [],
+      "qualifiers_present": [
+        "4.77",
+        "1.63",
+        "ait-qa"
+      ],
+      "qualifiers_missing": [],
+      "agent_claim_snippet": "graphotter achieves an average performance gain of +4.77% over the best baseline across two benchmark datasets and llm b"
+    },
+    "file": "2412.01230_JSON_claude-sonnet-4-5_20250929_B.json"
+  },
+  {
+    "arxiv_id": "2412.01230",
+    "condition": "JSON",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "C",
+    "score": 1,
+    "meta": {
+      "availability": "RETRIEVABLE_FROM_REPO",
+      "condition": "JSON",
+      "agent_retrieved": true,
+      "agent_abstained": false,
+      "agent_hallucinated": false,
+      "interpretation": "retrieval_from_paper_json"
+    },
+    "file": "2412.01230_JSON_claude-sonnet-4-5_20250929_C.json"
+  },
+  {
+    "arxiv_id": "2412.01230",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_numeric",
+    "score": 1,
+    "meta": {
+      "detail": "partial_match",
+      "overlap": 1.0
+    },
+    "file": "2412.01230_PROSE_claude-sonnet-4-5_20250929_A_numeric.json"
+  },
+  {
+    "arxiv_id": "2412.01230",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "A_prose",
+    "score": 1,
+    "meta": {
+      "detail": "partial_match",
+      "overlap": 0.95
+    },
+    "file": "2412.01230_PROSE_claude-sonnet-4-5_20250929_A_prose.json"
+  },
+  {
+    "arxiv_id": "2412.01230",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "B",
+    "score": 1,
+    "meta": {
+      "hallucinations_fired": [],
+      "qualifiers_present": [
+        "4.77",
+        "1.63",
+        "ait-qa"
+      ],
+      "qualifiers_missing": [],
+      "agent_claim_snippet": "graphotter achieves an average performance gain of +4.77% over the best baseline across experiments, with specific impro"
+    },
+    "file": "2412.01230_PROSE_claude-sonnet-4-5_20250929_B.json"
+  },
+  {
+    "arxiv_id": "2412.01230",
+    "condition": "PROSE",
+    "model": "claude-sonnet-4-5@20250929",
+    "task": "C",
+    "score": 1,
+    "meta": {
+      "availability": "RETRIEVABLE_FROM_REPO",
+      "condition": "PROSE",
+      "agent_retrieved": false,
+      "agent_abstained": true,
+      "agent_hallucinated": false,
+      "interpretation": "correct_abstention"
+    },
+    "file": "2412.01230_PROSE_claude-sonnet-4-5_20250929_C.json"
+  }
+]

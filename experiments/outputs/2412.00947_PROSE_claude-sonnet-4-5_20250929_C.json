@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2412.00947",
+  "condition": "PROSE",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "C",
+  "elapsed_s": 7.36,
+  "raw_response": "Looking at the paper, I need to find information about reproducing Table 1, which shows the accuracy of 23 VLMs on VisOnlyQA tasks.\n\nThe paper mentions in the Reproducibility Statement (page 11):\n\"In our GitHub repository, we provide our VisOnlyQA dataset, code for dataset creation and all experiments, and model responses.\"\n\nHowever, the paper itself does not explicitly provide the specific shell command to reproduce Table 1. Based on standard practices and the information provided, the command would likely be related to running evaluation scripts from their GitHub repository (https://github.com/psunlpgroup/VisOnlyQA).\n\nWithout access to the actual repository structure described in the paper, I cannot determine the exact command from the paper content alone. The paper does not include this specific command in the main text or appendices.\n\n{\"command\": \"Not specified in the paper - refer to https://github.com/psunlpgroup/VisOnlyQA for evaluation scripts\"}",
+  "usage": {
+    "input_tokens": 62826,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 224
+  }
+}

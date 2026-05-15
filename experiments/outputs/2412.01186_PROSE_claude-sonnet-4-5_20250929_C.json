@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2412.01186",
+  "condition": "PROSE",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "C",
+  "elapsed_s": 7.66,
+  "raw_response": "Looking at the paper, Table 3 shows experiments on the BELEBELE (th) benchmark with different prompt configurations (To, TiTo, LiTiTo, LiTiLo, LiTiLoTo) using both PPL-based and GEN-based evaluation approaches.\n\nBased on the paper's description that they built SailCompass on the OpenCompass framework and the mention that \"All datasets and evaluation scripts are public\" at https://github.com/sail-sg/sailcompass, the command would likely be:\n\n```json\n{\"command\": \"python run.py --datasets belebele_th --models llama-2-7b mistral-7b sea-lion-7b seallm-7b sailor-7b --prompt-variants To TiTo LiTiTo LiTiLo LiTiLoTo --eval-methods ppl gen\"}\n```\n\nHowever, since the exact command syntax is not specified in the paper and would depend on the actual implementation in the repository, the most accurate answer is:\n\n```json\n{\"command\": \"See https://github.com/sail-sg/sailcompass for the specific command to reproduce Table 3 results on BELEBELE (th) with different prompt configurations\"}\n```",
+  "usage": {
+    "input_tokens": 20779,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 286
+  }
+}

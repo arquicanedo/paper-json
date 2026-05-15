@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2412.00947",
+  "condition": "PROSE",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "A_numeric",
+  "elapsed_s": 4.59,
+  "raw_response": "{\"quote\": \"We evaluate 23 LVLMs and observe that state-of-the-art LVLMs, including GPT-4o and Gemini 2.5 Pro, perform poorly in the basic geometric perception tasks in VisOnlyQA (48.8% and 79.0% in accuracy on the Real split), while human performance is nearly perfect (93.5%)\", \"location\": \"Abstract\"}",
+  "usage": {
+    "input_tokens": 62886,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 99
+  }
+}

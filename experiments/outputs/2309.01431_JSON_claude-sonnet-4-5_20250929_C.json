@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2309.01431",
+  "condition": "JSON",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "C",
+  "elapsed_s": 5.84,
+  "raw_response": "Looking at the PAPER.JSON reproducibility.commands field:\n\n```json\n\"commands\": [\n  \"git clone https://github.com/chen700564/RGB\",\n  \"cd RGB && pip install -r requirements.txt\",\n  \"python evaluate_rgb.py --model gpt-4 --split test --lang en\"\n]\n```\n\nHowever, these commands show a generic evaluation template for a single model (gpt-4) in English only. Table 2 in the paper shows \"Error cases of noise robustness\" with specific examples, not benchmark results across multiple LLMs.\n\nThe actual benchmark results table referenced in the paper appears to be Table 1 (noise robustness across different noise ratios for 6 LLMs in both languages). The commands provided do not specify how to reproduce the complete multi-model, multi-language results shown in any of the main tables.\n\nSince there is no exact command provided to reproduce Table 2 specifically:\n\n{\"command\": \"NOTFOUND\"}",
+  "usage": {
+    "input_tokens": 15075,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 227
+  }
+}

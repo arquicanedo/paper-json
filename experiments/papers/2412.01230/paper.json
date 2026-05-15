@@ -1,0 +1,52 @@
+{
+  "id": "graphotter",
+  "title": "GraphOTTER: Evolving LLM-based Graph Reasoning for Complex Table Question Answering",
+  "version": "1.0.0",
+  "status": "published",
+  "authors": [
+    {
+      "name": "Jiasheng Ding",
+      "affiliation": "Unknown"
+    },
+    {
+      "name": "Zijun Sun",
+      "affiliation": "Unknown"
+    }
+  ],
+  "arxiv_categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "arxiv_id": "2412.01230",
+  "arxiv_url": "https://arxiv.org/abs/2412.01230",
+  "pdf_url": "https://arxiv.org/pdf/2412.01230",
+  "abstract": "We introduce GraphOTTER, a framework that evolves LLM-based graph reasoning for hierarchical table question answering. By representing tables as graphs and using iterative graph traversal actions (VisitNode, GetAllNeighbours, GetSharedNeighbours, AnswerQuestion), GraphOTTER achieves state-of-the-art results on HiTab and AIT-QA benchmarks.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "GraphOTTER achieves a notable improvement in complex table question answering, exhibiting an average performance gain of +4.77% over the best baseline.",
+      "evidence": [
+        "Table 2",
+        "Section 4.2"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "combining graph representations with explicit reasoning creates a powerful synergy that harnesses the flexibility of the graph while mitigating its inherent complexity",
+      "evidence": [
+        "Section 1",
+        "Section 4"
+      ]
+    }
+  ],
+  "reproducibility": {
+    "environment": "Python, OpenAI API",
+    "commands": [
+      "git clone https://github.com/JDing0521/GraphOTTER",
+      "cd GraphOTTER && pip install -r requirements.txt",
+      "python run_graphotter.py --dataset hitab --split test"
+    ],
+    "agent_friendly": true,
+    "human_intervention_required": false
+  }
+}

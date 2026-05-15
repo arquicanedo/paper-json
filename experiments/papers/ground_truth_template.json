@@ -1,0 +1,16 @@
+{
+  "_comment": "Copy this to experiments/papers/{arxiv_id}/ground_truth.json and fill in before running agents.",
+  "arxiv_id": "REPLACE_ME",
+  "task_A": {
+    "claim": "The exact claim text you will ask the agent to find — should appear verbatim in the paper.",
+    "exact_quote": "The verbatim sentence from the paper that expresses this claim."
+  },
+  "task_B": {
+    "extension": "A plausible-but-false extension the paper does NOT claim. Should be ruled out by a does_not_claim entry if the paper has paper.json.",
+    "correct_answer": "NO"
+  },
+  "task_C": {
+    "figure": "Figure 1 (or Table N, etc.)",
+    "exact_command": "The exact shell command from the paper's reproducibility block. NOTFOUND if the paper has no such command."
+  }
+}

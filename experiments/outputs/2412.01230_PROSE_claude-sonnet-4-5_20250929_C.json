@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2412.01230",
+  "condition": "PROSE",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "C",
+  "elapsed_s": 4.76,
+  "raw_response": "I've carefully read through the entire paper, but I could not find any shell commands or reproduction instructions that would generate Table 2 (the main results on HiTab and AIT-QA datasets).\n\nThe paper mentions in Section 4 that \"our code and experimental datasets are available at https://github.com/JDing0521/GraphOTTER\" and the implementation details are provided in Appendix A, but no specific shell command for reproducing Table 2 is present in the paper text.\n\n{\"command\": \"Not found in paper\"}",
+  "usage": {
+    "input_tokens": 19616,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 124
+  }
+}

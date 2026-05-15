@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2410.07331",
+  "condition": "JSON",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "C",
+  "elapsed_s": 2.24,
+  "raw_response": "Looking at the PAPER.JSON block's reproducibility.commands field:\n\n```json\n\"commands\": [\n  \"git clone https://github.com/da-code-bench/da-code\",\n  \"cd da-code && docker build -t da-code .\",\n  \"docker run da-code python evaluate.py --model gpt-4 --split test\"\n]\n```\n\nThe command to reproduce the main benchmark results (Table 1) appears to be:\n\n{\"command\": \"docker run da-code python evaluate.py --model gpt-4 --split test\"}",
+  "usage": {
+    "input_tokens": 25514,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 134
+  }
+}

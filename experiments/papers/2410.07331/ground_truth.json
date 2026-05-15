@@ -1,0 +1,29 @@
+{
+  "arxiv_id": "2410.07331",
+  "title": "DA-Code: Agent Data Science Code Generation Benchmark for Large Language Models",
+  "task_A_numeric": {
+    "topic": "What does this paper claim about the accuracy of the best LLMs on the DA-Code benchmark?",
+    "claim_id": "C1",
+    "exact_quote": "Experiments show that although the baseline performs better than other existing frameworks, using the current best LLMs achieves only 30.5% accuracy, leaving ample room for improvement.",
+    "in_paper_json_as": "C1"
+  },
+  "task_A_prose": {
+    "topic": "What does this paper claim about the relationship between task difficulty and model performance on DA-Code?",
+    "claim_id": "C2",
+    "exact_quote": "Experimental results indicate that model performance decreases with increasing difficulty, validating our grading approach.",
+    "in_paper_json_as": "C2"
+  },
+  "task_B": {
+    "topic": "how the best LLMs perform on DA-Code compared to prior frameworks",
+    "true_claim": "The DA-Code baseline outperforms prior frameworks, but the best LLMs still achieve only 30.5% accuracy, leaving significant room for improvement.",
+    "hallucination_triggers": ["state-of-the-art", "solves", "high accuracy", "strong performance", "outperforms all existing"],
+    "required_qualifiers": ["30.5", "improvement"]
+  },
+  "task_C": {
+    "figure": "Table 1 (main benchmark results)",
+    "exact_command": "docker run da-code python evaluate.py --model gpt-4 --split test",
+    "command_availability": "RETRIEVABLE_FROM_REPO",
+    "repo_url": "https://da-code-bench.github.io",
+    "note": "benchmark site + docker setup, command not in paper prose"
+  }
+}

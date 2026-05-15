@@ -1,0 +1,59 @@
+{
+  "id": "sailcompass",
+  "title": "SailCompass: Towards Reproducible and Robust Evaluation for Southeast Asian Languages",
+  "version": "1.0.0",
+  "status": "published",
+  "authors": [
+    {
+      "name": "Sheng Yang",
+      "affiliation": "Sea AI Lab"
+    },
+    {
+      "name": "Xuan-Phi Nguyen",
+      "affiliation": "Sea AI Lab"
+    },
+    {
+      "name": "Genta Indra Winata",
+      "affiliation": "Sea AI Lab"
+    },
+    {
+      "name": "Zheng-Xin Yong",
+      "affiliation": "Sea AI Lab"
+    }
+  ],
+  "arxiv_categories": [
+    "cs.CL"
+  ],
+  "arxiv_id": "2412.01186",
+  "arxiv_url": "https://arxiv.org/abs/2412.01186",
+  "pdf_url": "https://arxiv.org/pdf/2412.01186",
+  "abstract": "We introduce SailCompass, a reproducible and robust evaluation framework for Southeast Asian (SEA) languages covering 8 tasks across 14 datasets in Indonesian, Vietnamese, and Thai. We evaluate SEA-specialized LLMs (SeaLLM, Sailor, Sea-Lion, Typhoon) against general LLMs and find that SEA-specialized models still outperform general models, although the gap has narrowed.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "With manipulated training, the model shows a significant 17.2% improvement with prompt LiTiLo.",
+      "evidence": [
+        "Table 4",
+        "Section 5.1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "A balanced language distribution is important for developing better SEA-specialized LLMs.",
+      "evidence": [
+        "Section 4.1",
+        "Section 7"
+      ]
+    }
+  ],
+  "reproducibility": {
+    "environment": "Python, HuggingFace",
+    "commands": [
+      "git clone https://github.com/sail-sg/sailcompass",
+      "cd sailcompass && pip install -r requirements.txt",
+      "python evaluate.py --model seallm --lang id vi th --tasks all"
+    ],
+    "agent_friendly": true,
+    "human_intervention_required": false
+  }
+}

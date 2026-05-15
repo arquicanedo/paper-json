@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2412.01186",
+  "condition": "PROSE",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "A_prose",
+  "elapsed_s": 3.56,
+  "raw_response": "{\"quote\": \"We highlight the importance of balanced language distribution for developing better SEA LLMs, certified by the performance of machine translation and text summarization.\", \"location\": \"Abstract, under Insightful Findings for Future Work\"}",
+  "usage": {
+    "input_tokens": 20835,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 53
+  }
+}

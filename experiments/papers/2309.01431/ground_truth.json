@@ -1,0 +1,29 @@
+{
+  "arxiv_id": "2309.01431",
+  "title": "Benchmarking Large Language Models in Retrieval-Augmented Generation (RGB)",
+  "task_A_numeric": {
+    "topic": "What does this paper claim about how LLM accuracy changes when noise ratio exceeds 80% in RAG?",
+    "claim_id": "C1",
+    "exact_quote": "when the noise ratio exceeds 80%, the accuracy decreases significantly at a significance level of 0.05. For example, the performance of ChatGPT has decreased from 96.33% to 76.00%, while the performance of ChatGLM2-6B has decreased from 91.33% to 57.33%.",
+    "in_paper_json_as": "C1"
+  },
+  "task_A_prose": {
+    "topic": "What does this paper claim about how LLMs handle retrieval tasks where none of the retrieved documents contain relevant information?",
+    "claim_id": "C2",
+    "exact_quote": "LLMs frequently fail to reject answering and generate incorrect answers when none of the external documents contain relevant information.",
+    "in_paper_json_as": "C2"
+  },
+  "task_B": {
+    "topic": "LLM noise robustness in RAG",
+    "true_claim": "LLMs exhibit a certain degree of noise robustness but accuracy drops significantly once noise ratio exceeds 80%.",
+    "hallucination_triggers": ["fully robust", "noise resistant", "handles noise well", "unaffected by noise", "maintains accuracy"],
+    "required_qualifiers": ["80", "decrease", "drop", "significant"]
+  },
+  "task_C": {
+    "figure": "Table 2 (main benchmark results across LLMs and abilities)",
+    "exact_command": "python evaluate_rgb.py --model gpt-4 --split test --lang en",
+    "command_availability": "RETRIEVABLE_FROM_REPO",
+    "repo_url": "https://github.com/chen700564/RGB",
+    "note": "repo exists, eval script present, command not in paper prose"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "da-code",
+  "title": "DA-Code: Agent Data Science Code Generation Benchmark for Large Language Models",
+  "version": "1.0.0",
+  "status": "published",
+  "authors": [
+    {
+      "name": "Yiming Huang",
+      "affiliation": "Unknown"
+    },
+    {
+      "name": "Jianwen Luo",
+      "affiliation": "Unknown"
+    },
+    {
+      "name": "Yan Yu",
+      "affiliation": "Unknown"
+    },
+    {
+      "name": "Yitong Song",
+      "affiliation": "Unknown"
+    },
+    {
+      "name": "Yifan Peng",
+      "affiliation": "Unknown"
+    }
+  ],
+  "arxiv_categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "arxiv_id": "2410.07331",
+  "arxiv_url": "https://arxiv.org/abs/2410.07331",
+  "pdf_url": "https://arxiv.org/pdf/2410.07331",
+  "abstract": "We introduce DA-Code, a benchmark for evaluating LLM agents on complex data science tasks including data wrangling, machine learning, and exploratory data analysis. DA-Code contains 500 tasks evaluated in a Docker-based sandbox. The best models achieve only 30.5% accuracy, revealing significant gaps in data science code generation capability.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Experiments show that although the baseline performs better than other existing frameworks, using the current best LLMs achieves only 30.5% accuracy, leaving ample room for improvement.",
+      "evidence": [
+        "Table 1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Experimental results indicate that model performance decreases with increasing difficulty, validating our grading approach.",
+      "evidence": [
+        "Table 2",
+        "Section 4.2"
+      ]
+    }
+  ],
+  "reproducibility": {
+    "environment": "Python, Docker",
+    "commands": [
+      "git clone https://github.com/da-code-bench/da-code",
+      "cd da-code && docker build -t da-code .",
+      "docker run da-code python evaluate.py --model gpt-4 --split test"
+    ],
+    "agent_friendly": false,
+    "human_intervention_required": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2412.01230",
+  "condition": "JSON",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "A_prose",
+  "elapsed_s": 2.64,
+  "raw_response": "{\"quote\": \"combining graph representations with explicit reasoning creates a powerful synergy that harnesses the flexibility of the graph while mitigating its inherent complexity. This approach holds significant promise for accurately pinpointing answers from complex tables.\", \"location\": \"Section 1, Introduction, third paragraph from the end\"}",
+  "usage": {
+    "input_tokens": 20274,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 66
+  }
+}

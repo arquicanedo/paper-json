@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2412.00947",
+  "condition": "PROSE",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "B",
+  "elapsed_s": 4.19,
+  "raw_response": "{\"claim\": \"GPT-4o achieves 48.8% accuracy on the VisOnlyQA-Eval-Real split, which is far from the near-perfect human performance of 93.5%.\"}",
+  "usage": {
+    "input_tokens": 62861,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 52
+  }
+}

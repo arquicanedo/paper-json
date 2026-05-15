@@ -1,0 +1,29 @@
+{
+  "arxiv_id": "2412.01186",
+  "title": "SailCompass: Towards Reproducible and Robust Evaluation for Southeast Asian Languages",
+  "task_A_numeric": {
+    "topic": "What does this paper claim about the effect of manipulated training on model performance with the LiTiLo prompt configuration?",
+    "claim_id": "C1",
+    "exact_quote": "With manipulated training, the model shows a significant 17.2% improvement with prompt LiTiLo.",
+    "in_paper_json_as": "C1"
+  },
+  "task_A_prose": {
+    "topic": "What does this paper claim about the importance of balanced language distribution for SEA LLM development?",
+    "claim_id": "C2",
+    "exact_quote": "A balanced language distribution is important for developing better SEA-specialized LLMs.",
+    "in_paper_json_as": "C2"
+  },
+  "task_B": {
+    "topic": "which prompt language works better for SEA language models",
+    "true_claim": "English prompts generally outperform native prompts, but Sea-Lion is an exception because its pretraining corpus is SEA-heavy, and the gap is small enough (<0.5 Chrf++) to be acceptable either way.",
+    "hallucination_triggers": ["always better", "universally better", "all models benefit", "every model performs better", "consistently outperform"],
+    "required_qualifiers": ["0.5", "sea-lion"]
+  },
+  "task_C": {
+    "figure": "Table 3 (MCQ benchmark results on BELEBELE with prompt variants)",
+    "exact_command": "python evaluate.py --model seallm --lang id vi th --tasks all",
+    "command_availability": "RETRIEVABLE_FROM_REPO",
+    "repo_url": "https://github.com/sail-sg/sailcompass",
+    "note": "repo exists with eval scripts, command not in paper prose"
+  }
+}

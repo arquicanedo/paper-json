@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2412.01186",
+  "condition": "JSON",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "B",
+  "elapsed_s": 4.05,
+  "raw_response": "{\"claim\": \"English prompts generally work better than native SEA language prompts for most models, though the performance gap is acceptable (less than 0.5 Chrf++), and SEA-specialized models like Gemma and Sailor show only tiny differences between prompt languages while Sealion (trained mainly on SEA languages) performs better with native prompts.\"}",
+  "usage": {
+    "input_tokens": 21341,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 84
+  }
+}

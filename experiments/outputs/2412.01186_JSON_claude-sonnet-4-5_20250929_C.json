@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2412.01186",
+  "condition": "JSON",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "C",
+  "elapsed_s": 5.42,
+  "raw_response": "Looking at the PAPER.JSON reproducibility.commands field:\n\n```json\n\"commands\": [\n  \"git clone https://github.com/sail-sg/sailcompass\",\n  \"cd sailcompass && pip install -r requirements.txt\",\n  \"python evaluate.py --model seallm --lang id vi th --tasks all\"\n]\n```\n\nThese commands show a general evaluation script but do not specify the exact command to reproduce Table 3 with its specific prompt variants (To_PPL, TiTo_PPL, LiTiTo_PPL, LiTiLo_PPL, LiTiLo_GEN, LiTiLoTo_PPL) on BELEBELE (th).\n\nThe paper states \"All datasets and evaluation scripts are public\" with a GitHub link, but the PAPER.JSON does not contain the exact command for Table 3's specific configuration.\n\n{\"command\": \"NOTFOUND\"}",
+  "usage": {
+    "input_tokens": 21465,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 218
+  }
+}

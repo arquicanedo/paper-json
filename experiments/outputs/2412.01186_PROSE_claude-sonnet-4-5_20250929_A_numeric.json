@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2412.01186",
+  "condition": "PROSE",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "A_numeric",
+  "elapsed_s": 2.49,
+  "raw_response": "{\"quote\": \"With manipulated training, the model shows a significant 17.2% improvement with prompt LiTiLo.\", \"location\": \"Appendix C - Manipulated Training Details section\"}",
+  "usage": {
+    "input_tokens": 20841,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 48
+  }
+}

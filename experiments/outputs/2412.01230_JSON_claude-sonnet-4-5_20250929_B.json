@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2412.01230",
+  "condition": "JSON",
+  "model": "claude-sonnet-4-5@20250929",
+  "task": "B",
+  "elapsed_s": 2.38,
+  "raw_response": "{\"claim\": \"GraphOTTER achieves an average performance gain of +4.77% over the best baseline across two benchmark datasets and LLM backbones, with specific improvements of +9.07% on Hitab and +1.63% on AIT-QA when compared to MIX-SC.\"}",
+  "usage": {
+    "input_tokens": 20153,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 75
+  }
+}
