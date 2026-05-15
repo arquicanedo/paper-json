@@ -5,13 +5,14 @@
 
 Run:
     uv run validator.py path/to/paper.json
+    uv run validator.py https://github.com/owner/repo
     uv run validator.py path/to/paper.json --against path/to/paper.typ
 
 Exit codes:
     0 = valid
     1 = schema violation
     2 = cross-reference violation (C/D/T/F IDs in paper.json missing from source, or vice versa)
-    3 = file not found
+    3 = file not found / fetch failed
 """
 
 from __future__ import annotations
@@ -20,7 +21,21 @@ import argparse
 import json
 import re
 import sys
+import urllib.request
 from pathlib import Path
+
+def _github_to_raw(url: str) -> str:
+    """Rewrite a github.com repo URL to its raw paper.json URL."""
+    url = url.rstrip("/")
+    url = url.replace("https://github.com/", "https://raw.githubusercontent.com/")
+    if not url.endswith("/paper.json"):
+        url += "/main/paper.json"
+    return url
+
+def _fetch_remote(url: str) -> dict:
+    raw_url = _github_to_raw(url) if "github.com" in url and not url.endswith(".json") else url
+    with urllib.request.urlopen(raw_url) as resp:
+        return json.loads(resp.read().decode("utf-8")), raw_url
 
 def _validate_value(value, field_schema: dict, path: str, errors: list[str]) -> None:
     if value is None:
@@ -100,25 +115,34 @@ def validate_paper(paper: dict) -> list[str]:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("paper_json", type=Path)
+    ap.add_argument("paper_json")
     ap.add_argument("--against", type=Path, help="Typst source (.typ) to cross-check claim IDs against.")
     args = ap.parse_args()
 
-    if not args.paper_json.exists():
-        print(f"error: {args.paper_json} not found", file=sys.stderr)
-        return 3
-
-    with args.paper_json.open("r", encoding="utf-8") as f:
-        paper = json.load(f)
+    label = args.paper_json
+    if args.paper_json.startswith("http://") or args.paper_json.startswith("https://"):
+        try:
+            paper, raw_url = _fetch_remote(args.paper_json)
+            label = raw_url
+        except Exception as exc:
+            print(f"error: could not fetch {args.paper_json}: {exc}", file=sys.stderr)
+            return 3
+    else:
+        p = Path(args.paper_json)
+        if not p.exists():
+            print(f"error: {p} not found", file=sys.stderr)
+            return 3
+        with p.open("r", encoding="utf-8") as f:
+            paper = json.load(f)
 
     errors = validate_paper(paper)
     if errors:
-        print(f"SCHEMA: {len(errors)} violation(s) in {args.paper_json}")
+        print(f"SCHEMA: {len(errors)} violation(s) in {label}")
         for e in errors:
             print(f"  - {e}")
         return 1
 
-    print(f"SCHEMA: ok ({args.paper_json})")
+    print(f"SCHEMA: ok ({label})")
     print(f"  claims:      {len(paper.get('claims', []))}")
     print(f"  definitions: {len(paper.get('definitions', []))}")
     print(f"  detectors:   {len(paper.get('detectors', []))}")
