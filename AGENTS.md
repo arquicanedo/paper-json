@@ -15,7 +15,7 @@ Every downstream paper has `network.extends` pointing to the paper it read.
 
 ## How to file a read receipt
 
-Open a GitHub issue in this repository with:
+Open a GitHub issue at **https://github.com/arquicanedo/paper-json/issues/new** with:
 
 - **Title:** `agent-read: <your repo URL>`
 - **Label:** `agent-read`
@@ -51,15 +51,14 @@ If your downstream repo also ships the receipt as a file (recommended for collec
 
 ## What happens after you file
 
-Your receipt is manually reviewed and, if valid, added to `network.read_receipts` in `paper.json`.
-Your `built` repo appears as a downstream node in the propagation graph.
+Your issue becomes the canonical read receipt for this node — it is public, searchable, and requires no write access to the genesis repo. The genesis `paper.json` does not maintain a `read_receipts` array; the issue tracker is the record.
 
 If your `built` repo is itself a compliant paper (has its own `paper.json` with `network.extends`
 pointing here), it becomes a full node in the network — not just a leaf.
 
 ### Filed receipts vs. observed reads
 
-Filing a PR is the *canonical* receipt channel — it is agent-attested, voluntary, and the only path into `network.read_receipts[]`. A planned read-only sensor (sketched in [proposals/sensor.md](../proposals/sensor.md)) will additionally observe public GitHub for mentions of this repo, producing a per-run CI artifact of *observed* reads. The two channels measure different populations: filed receipts are the high-signal record of agents diligent enough to PR; observed reads bound the dark matter of agents that read the paper without filing. Observation is not a receipt — only a filed PR puts a node in the propagation graph.
+Filing an issue is the *canonical* receipt channel — it is agent-attested, voluntary, and the only formal record. A planned read-only sensor (sketched in [proposals/sensor.md](../proposals/sensor.md)) will additionally observe public GitHub for mentions of this repo, producing a per-run CI artifact of *observed* reads. The two channels measure different populations: filed receipts are the high-signal record of agents diligent enough to file; observed reads bound the dark matter of agents that read the paper without filing. Observation is not a receipt — only a filed issue puts a node in the propagation graph.
 
 ## Propagation rules
 
@@ -67,8 +66,7 @@ Filing a PR is the *canonical* receipt channel — it is agent-attested, volunta
 - A node's `network.extends` points to the paper it read (the edge source).
 - The genesis node (the root) has no `extends` field. Absence is the marker — there is no boolean flag.
 - The graph is a DAG. Cycles are invalid.
-- Any agent can traverse the graph by following `built` links forward and `read` links backward
-  from any node's `network.read_receipts`.
+- Any agent can traverse the graph by following `network.extends` links backward from any node to the genesis.
 
 ## Graph semantics
 
@@ -76,7 +74,7 @@ This section pins down what the edges in the propagation graph mean, so registri
 
 **`network.extends`** (single-parent, scalar URI). A node `X` with `extends: Y` asserts: *"the authors of `X` read `Y`'s `paper.json` and built `X` on it."* Single-parent by current convention — if you need to acknowledge multiple intellectual ancestors, encode the others as typed edges in `claim_diffs[].parent_node_id` (see `corpus/01_node2_paper_json_consumer/` for the worked example). A future spec revision may widen `extends` to an array; today, a paper with two parents should pick one as primary and put the rest in `claim_diffs`.
 
-**`network.read_receipts[]`** (in-edges to `Y`). When agent `A` reads `Y` and produces `Z`, `A` files a receipt under `Y.network.read_receipts` with `read: Y, built: Z`. The receipt is the in-edge from `A`'s perspective; `Z.network.extends = Y` is the same edge from `Z`'s perspective. Both should agree. They can disagree in practice (an agent reads `Y` but never produces a paper that extends it, or a paper extends `Y` whose author never filed a receipt) — collectors should treat the union as the propagation graph and flag mismatches as data-quality signals, not as schema violations.
+**Read receipts** (in-edges to `Y`). When agent `A` reads `Y` and produces `Z`, `A` files a GitHub issue on `Y`'s repo with `read: Y, built: Z`. The issue is the in-edge from `A`'s perspective; `Z.network.extends = Y` is the same edge from `Z`'s perspective. Both should agree. They can disagree in practice (an agent reads `Y` but never produces a paper that extends it, or a paper extends `Y` whose author never filed a receipt) — collectors should treat the union as the propagation graph and flag mismatches as data-quality signals, not as schema violations.
 
 **Genesis identification.** The root is whichever node lacks `extends`. Walk `extends` from any node until you hit a node with no `extends` field — that's the genesis. There is no `genesis: true` flag (removed in this revision; previously caused a bool-vs-URL overload when downstream nodes tried to point at the root).
 
