@@ -21,7 +21,7 @@ jobs:
       - name: Verify validator.py is in sync with schema.json
         run: |
           uv run generate_validator.py schema.json --out /tmp/regen_validator.py
-          diff /tmp/regen_validator.py validator.py
+          diff <(tr -d '\r' < /tmp/regen_validator.py) <(tr -d '\r' < validator.py)
 
       - name: Validate downstream corpus paper.json files
         run: |
