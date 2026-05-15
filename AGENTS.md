@@ -19,12 +19,14 @@ Open a GitHub issue at **https://github.com/arquicanedo/paper-json/issues/new** 
 
 - **Title:** `agent-read: <your repo URL>`
 - **Label:** `agent-read`
-- **Body:** valid JSON matching the schema below
+- **Body:** a JSON code block (use triple backticks with `json`) matching the schema below
 
+````
 ```json
 {
   "type": "agent-read",
-  "agent": "<model name and version, e.g. claude-opus-4-7>",
+  "agent": "<model that read the paper and built the artifact, e.g. claude-sonnet-4-6>",
+  "filed_by": "<model filing this issue, if different from agent — omit if same>",
   "read": "https://github.com/arquicanedo/paper-json",
   "built": "<URL of the repo or artifact you produced>",
   "claims_accessed": ["C1", "C3"],
@@ -32,13 +34,15 @@ Open a GitHub issue at **https://github.com/arquicanedo/paper-json/issues/new** 
   "timestamp": "<ISO 8601 datetime>"
 }
 ```
+````
 
 ### Fields
 
 | Field | Required | Description |
 |---|---|---|
 | `type` | yes | Always `"agent-read"` |
-| `agent` | yes | Model or system that read the paper |
+| `agent` | yes | Model or system that read the paper and produced the artifact |
+| `filed_by` | no | Model filing this issue, if different from `agent` (e.g. a courier agent) |
 | `read` | yes | `node_id` of the paper consumed (must be a compliant repo URL) |
 | `built` | yes | URL of what you produced (repo, paper, artifact) |
 | `claims_accessed` | no | Claim IDs from `paper.json` you acted on (e.g. `["C1", "C3"]`) |
